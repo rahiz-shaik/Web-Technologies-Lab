@@ -1,0 +1,44 @@
+<html>
+
+<head>
+     <style>
+          a:link{text-decoration:none;}
+          a{color: yellow;}
+          a:hover{text-decoration:underline;}
+          body{color: wheat   ;
+               background-image: url("https://i.ytimg.com/vi/Aphj2Wf6R7Q/maxresdefault.jpg");
+               background-size: cover;
+               font-size: larger;
+             }
+             span{font-weight: bolder;text-align: center;}
+     </style>
+</head>
+
+<body>
+     <h1 style="text-align: center;color: blueviolet;">MG GRAND RESTUARANT</h1><br><br>
+     <ul>
+          <span style="font-size: larger;color:yellow ;">Vegeterian Items</a><br><br></span>
+          <li onclick="showDetails(this)" id="Masala Channa" food-type="Channa">Masala Channa</li>
+          <li onclick="showDetails(this)" id="Pav Bhaji" food-type="Bhaji">Pav Bhaji</a></li>  
+          <li onclick="showDetails(this)" id="Paneer Makhani Biryani" food-type="Biryani">Paneer Makhani Biryani</a></li> 
+          <li onclick="showDetails(this)" id="Stuffed Masala Mushroom" food-type="Mushroom">Stuffed Masala Mushroom</a></li>
+          <li onclick="showDetails(this)" id="Paneer Jalfrezi" food-type="Paneer">Paneer Jalfrezi Recipe</a></li>  
+          
+          <br><br>
+          <span style="font-size:larger ;color: yellow ;">Non Vegetarian Items</span><br><br>
+          <li onclick="showDetails(this)" id="Hyderabadi Chicken Dum Biryani" food-type="Fresh Chicken">Hyderabadi Chicken Dum Biryani</li>
+          <li onclick="showDetails(this)" id="Hyderabadi Leg Piece Biryani" food-type="Chicken">Hyderabadi Leg Piece Biryani</li>  
+          <li onclick="showDetails(this)" id="Hyderabadi Chicken Family Pack" food-type="Farm Chicken">Hyderabadi Chicken Family Pack</li> 
+          <li onclick="showDetails(this)" id="Mutton Fried Piece Biryani with Bone" food-type="Mutton+Bones">Mutton Fried Piece Biryani with Bone</li>
+          <li onclick="showDetails(this)" id="Tandoori Chicken" food-type="Chicken">Tandoori Chicken</li>  
+          
+     </ul>
+
+<script>
+     function showDetails(food) {
+       var foodType = food.getAttribute("food-type");
+       alert("The Recipe of " + food.innerHTML + " is made of " + foodType + ".");
+     }
+</script>
+</body>
+</html>

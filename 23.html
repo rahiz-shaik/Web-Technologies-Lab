@@ -1,0 +1,48 @@
+
+<html>
+     <head>
+          <style>
+               canvas{
+                    border: 1px solid black;
+                    border-radius: 10px;
+               }
+          </style>
+     </head>
+     <body>
+          <canvas id="my_canvas"width="800" height="400" style="background-color: rgb(219, 179, 245);margin-left: 250px;">
+          
+          </canvas>
+     
+
+          <script>
+               var c = document.getElementById("my_canvas");
+               var c = c.getContext("2d");
+               c.moveTo(90,90);
+               c.lineWidth = "3";
+               c.lineTo(600,300);
+               c.strokeStyle="#F1C40F";
+               c.stroke();
+               
+               c.beginPath();
+               c.lineWidth = "3";
+               c.arc(95, 200, 40, 0, 2 * Math.PI);
+               c.strokeStyle="green";
+               c.stroke();
+
+               c.beginPath();               c.moveTo(50,90);
+               c.lineWidth = "3";
+               c.rect(500,20,150,100);
+               c.strokeStyle="#2471A3";
+               c.stroke();
+
+               c.beginPath();               c.moveTo(50,90);
+               c.lineWidth = "3";
+               c.rect(200,280,150,100);
+               // c.fillStyle="green";
+               c.fillStyle = "skyblue";
+               c.fill();
+               c.strokeStyle="green";
+               c.stroke();
+          </script>
+     </body>
+</html>
