@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Log In</title>
+  <style>
+    .fb9 {
+      border: 1px solid #3366FF;
+      background-color: rgb(130, 150, 238);
+      width:150px;
+      height:30px;
+    }
+  </style>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+  <form action="" method="post">
+    <h1 style="text-align: center;">Login</h1>
+    <div>
+      <label for="name">Name:</label>
+      <input name="name" required><br><br>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input name="email" type="email" required><br><br>
+    </div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+
+    <div>
+      <label for="phone">Phone:</label>
+      <input name="phone" type="phone" required><br><br>
+    </div>
+    <img alt="" src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=600/uploads/users/30/posts/23024/image/nocaptcha.gif" width="620px" height="170px" class="resized-image resized-image-desktop" srcset="https://cms-assets.tutsplus.com/cdn-cgi/image/width=1200/uploads/users/30/posts/23024/image/nocaptcha.gif 2x"><br><br>
+    <input type="submit" value="Submit" class="fb9" />
+
+  </form>
+
+</body>
+
+</html>

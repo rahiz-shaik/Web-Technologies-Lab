@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: royalblue;
+                font-size: 25px;
+                text-align: center           
+                }
+        </style>
+    </head>
+<body>
+
+<h2>JavaScript Objects</h2>
+<p>Creating a JavaScript Object:</p>
+
+<p id="csse"></p>
+
+<script>
+const student = new Object();
+student.firstName = "pavan";
+student.age = 25;
+student.eyeColor = "black"; 
+
+document.getElementById("csse").innerHTML =
+student.firstName + " is " + student.age + " years old."; 
+
+//creating js objects with object literal
+let car = {
+	name : 'GT',
+	maker : 'BMW',
+	engine : '1998cc'
+};
+car.brakesType = 'All Disc';
+
+document.write(car.name); 
+document.write('<br/>');
+document.write(car['maker']);
+document.write('<br/>');
+document.write(car['engine']);
+document.write('<br/>');
+document.write('<br/>');
+
+//property accessor
+console.log(car.name); 
+console.log(car['maker']); 
+
+console.log(car);
+
+
+const coder = {
+    isStudying : false,
+    printIntroduction : function(){
+      document.write(`My name is ${this.name}. Am I studying?: ${this.isStudying}`);
+    }
+};
+const me = Object.create(coder);
+me.name = 'basha';
+me.isStudying = false;
+me.printIntroduction();
+
+</script>
+
+</body>
+</html>

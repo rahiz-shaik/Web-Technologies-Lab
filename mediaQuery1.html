@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+            @media screen and (max-width: 1366px)
+            {
+                body {
+                    background-color: rgb(177, 173, 230);
+                 }
+            }
+
+            @media screen and (max-width: 1000px)
+            {
+                body {
+                    background-color: lightblue;
+                 }
+            }
+            @media screen and (max-width: 800px)
+            {
+                body {
+                    background-color: rgb(41, 28, 232);
+                 }
+            }
+            @media screen and (max-width: 300px)
+            {
+                body {
+                    background-color: rgb(247, 44, 139);
+                 }
+            }
+            @media screen and (max-width: 600px)
+            {
+                body {
+                    background-color: rgb(106, 236, 36);
+                 }
+            }
+        </style>
+    </head>
+
+    <body style="text-align: center;font-family: cursive;">
+        <h2 style="color: cornsilk;">Resize the browser window.</h2>
+
+        <h2 id="wid"></h2>
+        <h2 id="hei"></h2>
+        <script>
+            let x = "height is " + window.screen.height; + " px"
+            let y = "width is " + window.screen.width; + " px"
+            document.getElementById("wid").innerHTML=x
+            document.getElementById("hei").innerHTML=y
+        </script>
+    </body>
+</html>

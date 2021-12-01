@@ -1,0 +1,181 @@
+<html>
+    <head>
+        
+        <style>
+            header{
+                color: #900C3F;
+                text-align: center;
+                padding: 20px;
+                text-shadow: 1px 1px #d7ee57;
+                
+            }
+
+            body{
+                text-align: left;
+                color: #a6ff00;
+                background-color: violet;
+                font-size: larger;
+            }
+
+            .console{
+                color:#184e77 ;
+                font-size: larger;
+            }
+            .sum{
+                color: #7fa097;
+                font-size: larger;
+
+            }
+            .write{
+                color: #e09f3e;
+                font-size: larger;
+
+            }
+            .alert{
+                color: #2a18c9;
+                font-size: larger;
+
+            }
+            .variable{
+                color:#3dfb4d;
+                font-size: larger;
+            }
+            .object{
+                color:rgb(43, 226, 211);
+            }
+            .buttoon{
+                border-radius: 5px;
+                color: rgb(255, 0, 64);
+                background-color: rgb(255, 178, 105);
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Designing  a WebPage that displays text or contents using JS</h1>
+        </header>
+
+        <div class="console">
+
+            <h3>This is By using console.log</h3>
+            <h5>You Can cheq Console In Developer tools</h5>
+
+            <script>
+                console.log("This is By using console.log")
+            </script>
+        </div>
+
+        <br><br>    
+
+
+        <div class="write">
+
+            <h3>This is By using document.write</h3>
+
+        <script>
+            document.write("Eren yeager") 
+        </script>
+
+        </div>
+
+<br><br><br>
+
+
+        <div class="Alert">
+            <h2>This is By using Alert</h2>
+            <button onclick="fun_alert()" class="buttoon">Click Here to See Alert</button>
+        </div>
+        <script>
+            function fun_alert()
+            {
+                alert("Back Again");
+            }
+        </script>
+        
+<br><br><br>
+
+        <div class="sum">
+            <h3>This Is Addition of 2 Numbers</h3>
+            <script>
+                var a = 1;
+                var b = 2;
+                var sum = a+b;
+
+                document.write("A is ="+a);
+                document.write("<br><br>B is ="+b);
+                document.write("<br><br>sum = "+sum);
+            </script>
+        </div>
+
+<br><br><br>
+
+        <div class="variable">
+            
+                <h3>This Is Using The Variable</h3>
+
+                <h5 id="eo"></h5>
+
+                <script>
+                    var name =  "BOOKS READER";
+                    document.getElementById("eo").innerHTML=name; 
+                </script>
+        </div>
+
+<br><br><br>
+
+        <div class="object">
+            
+            <h3>This is by Using Object and Variable</h3>
+
+            <h4 id="demo"></h4>
+            <script>
+
+                const SRB = {
+                    name : "rahiz",
+                    age : 19,
+                    Branch : "CSSE"
+                };
+
+                document.getElementById("demo").innerHTML = SRB.name+","+SRB.Branch;
+
+            </script>
+
+<br><br><br>
+
+            <div class="object">
+            <h3>This is by Using Object and Variable Ex-2</h3>
+
+                <h4 id="JJK"></h4>
+
+                <script>
+                    var ravi = {
+                        name : "KIRAN",
+                        year : 2020,
+                        movie : "SR"
+                    };
+
+                    document.getElementById("JJK").innerHTML = ravi.name +","+ ravi.year +","+ ravi.movie;
+                </script>
+            </div>
+            
+<br><br><br>
+
+            <div>
+
+            </div>
+
+
+            <p id= "kkk"></p>
+            <script>
+                var rahiz = {
+                    age = 19,
+                    name = "basha"
+                }
+                document.getElementById("kkk").innerHTML = rahiz;
+                
+            </script>
+
+
+    </body>
+</html>

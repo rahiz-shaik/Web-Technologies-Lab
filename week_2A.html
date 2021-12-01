@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <style>
+            body{
+                    background-image: url(https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+                    background-size:cover;background-repeat: no-repeat;width: 100%;
+            }
+            .form{
+                font-size:large;
+                color: rgb(255, 0, 179);
+
+            }
+            .box{
+                height: 40px;
+                width: 250px;
+            }
+        </style>
+
+        <script>
+            function getinfo() {
+              username = document.getElementById("uname").value;
+              password = document.getElementById("pswd").value;
+              if (typeof Storage !== "undefined") {
+                if (localStorage.getItem(`username-${username}`) != null) {
+                  if(localStorage.getItem(`password-${username}`) == password){
+                    alert('successfully logged in');
+                  }
+                  else{
+                    alert('Password is incorrect');
+                  }
+                } else {
+                  localStorage.setItem(`username-${username}`, username);
+                  localStorage.setItem(`password-${username}`, password);
+                  alert('New user created');
+                }
+              }
+             }
+          </script> 
+    </head>
+
+    <body>
+        <form>
+
+
+        <div class="form" style="text-align: center;padding-top: 100px;">
+        <h2 style="color:rgb(20, 255, 71);">Local Storage</h2>
+        <label for="uname">Name</label><br>
+        <input class="box" type="text" name="Username" id="uname">
+        <br><br><br>
+        <label for="pswd">Password</label><br>
+        <input class="box" type="password" name="pass" id="pswd">
+        <br><br><br>
+
+        <button onclick="getinfo()" style="height: 50px;width: 150px;color: rgb(255, 30, 30);background-color: darkturquoise;">Submit</button>
+        
+        </div>
+
+
+    </form>
+
+           
+    </body>
+</html>

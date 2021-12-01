@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <style>
+       body{
+         background-color: rgba(80, 112, 255, 0.657);
+         text-align: center;
+       }
+
+       table,th,td,tr{
+         color:ghostwhite;
+         border-collapse: collapse;
+       }
+     </style>
+      <script>
+      function showDB()
+      {
+        if(typeof(Storage) == "undefined")
+          alert("No local Storage");
+        else if(window.openDatabase)
+        {          
+          var db = openDatabase("CSSE","1.0","CSSE Employee Database",100000);
+                  db.transaction(function(tx){
+            var tid = document.getElementById('dbtable');
+           
+            tx.executeSql("SELECT * FROM EMP",[],
+              function(tx,rs){
+                for(var i = 0; i < rs.rows.length; i++)
+                {
+                  item = rs.rows.item(i);
+                  var name = item['name'];
+                  var emp_id= item['emp_id'];
+                  var department= item['department'];
+                  var salary= item['salary'];
+                  var address= item['address'];
+                  tid.innerHTML += "<tr><td>"+name+"</td><td>"+emp_id+"</td><td>"+department+"</td><td>"+salary+"</td><td>"+address+"</td></tr>";
+                }
+              });
+          });
+        }
+        else
+          alert("Unable to open websql database");
+        }  
+          
+    </script>
+  </head>
+  <body onload='showDB()'>
+    <h2 style="color: rgb(233, 41, 137);">Table Data</h2><br><br><br><br>
+    <table id='dbtable' border="2" style="margin-left: 200px;">
+      <tr>
+
+      </tr>  
+    </table>
+      </body>
+</html>

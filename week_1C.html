@@ -1,0 +1,145 @@
+<html>
+     <head>
+          <style>
+               form{
+                    text-align: center;
+               }
+               .heads{
+                    text-align: center
+               }
+               body {
+                         font-family: "DM Sans", sans-serif;
+                         line-height: 1.5;
+                         background-color: #f1f3fb;
+                         padding: 0 2rem;
+                    }
+               .input_label{
+                    padding-right: 90px;
+                    color:rgb(118, 214, 39);
+               }
+               .radio{
+                    padding-right: 120px;
+               }
+
+               .button {
+                        background-color: #e6e949;
+                        color: black;
+                        padding: 10px 25px;
+                        text-align: center;
+                        border-radius: 5px;
+                        font-size: 15px;
+                    }
+               .inpu{
+                    /* width: 0%; */
+                    height: 5%;
+                    border-radius: 5px;
+                    border-collapse: collapse;
+               }
+               .inpu:hover{
+                    background-color: #cac0cc1a;
+               }
+               
+               
+
+          </style>
+     </head>
+     <body style="color:rgb(40, 224, 117) ;background-size:full;background-repeat: no-repeat;width: 100%;background-image: url(https://svce.axlr.in/images/library-img-one-new.jpg);">
+          <title>Week_1C</title>
+          <div class="heads">
+               <h1 style="color: rgb(90, 128, 0);">Registration for store</h1><br>
+               <h4 style="color: rgb(16, 247, 247);">Lets Create Your Account</h4>
+          </div>
+          
+          <form align="center">
+               <fieldset style="width: 50%;margin-left: auto;margin-right: auto;background-color: #8d7f873b;">
+               <legend style="text-align: left;color:#5323ff;font-size: large;"><b>Enter Your Details</b></legend>
+               <div>
+                    <label class="input_label" for="fname">First Name</label>
+                    <br>
+                    <input class="inpu" type="text" name="First_Name" id="fname">
+               </div>   
+
+                    <br>
+
+               <div>
+                    <label class="input_label" for="lname">Last Name</label>
+                    <br>
+                    <input class="inpu" type="text" name="Last_Name" id="lname">
+               </div>
+                    <br>
+
+                    <div class="radio" >
+                         <span style="padding-left: 100px;"><input type="radio" name="gen" id="male"></span>
+                         <label for="male">Male</label>
+                         <span style="padding-left: 15px;"><input type="radio" name="gen" id="male"></span>
+                         <label for="male">Female </label>
+                    </div>
+               <br>
+               <div>
+                    <label for="dob" style="padding-right: 70px;">Date of Birth</label><br>
+                    <span style="padding-right: 10px;"><input class="inpu" type="date" id="dob" name="dob"></span>
+               </div>
+
+               <br>
+
+               <div>
+                    <label class="input_label" for="use">Username</label>
+                    <br>
+                    <input class="inpu" type="text" name="use" id="use">
+               </div>
+               <br>
+
+               <div>
+                    <label class="input_label" for="pass">Password</label>
+                    <br>
+                    <input class="inpu" type="password" name="pass" id="pass">
+               </div>
+
+               <br>
+
+               <div>
+                    <label class="input_label" for="pass" style="padding-left: 60px;">Confirm Passwords</label>
+                    <br>
+                    <input class="inpu" type="password" name="pass" id="pass">
+               </div>
+
+               <br>
+
+               <div>
+                    <label class="input_label" for="addr" style="padding-right: 110px;">Address</label>
+                    <br>
+                    <input class="inpu" type="text" name="addr" id="addr">
+               </div>
+               <br>
+               <div>
+                    <label class="input_label" for="zip" style="padding-left:10px;"> Postal Code</label>
+                    <br>
+                    <input class="inpu" type="number" name="zip" id="zip">
+               </div>
+
+               <br>
+
+               <div>
+                    <label class="input_label" for="zip" style="padding: left 2px;">  Mobile No.</label>
+                    <br>
+                    <input class="inpu" type="number" name="zip" id="zip">
+               </div>
+
+               <br>
+
+               <div>
+                    <label class="input_label" for="mail" style="padding-right: 110px;">Email-Id</label>
+                    <br>
+                    <input class="inpu" type="email" name="mail" id="mail">
+               </div>
+               <br><br>
+               <div >
+
+                    <button class="button">
+                         Submit
+                    </button>
+               </div>
+          </form>
+               </fieldset>
+     </body>
+</html>

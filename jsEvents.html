@@ -1,0 +1,110 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       body{
+                background-color: rgb(53, 48, 51);
+              
+                text-align: center           
+                } 
+    </style>
+  </head>
+<body onload="myFunction()">
+<h1 style="text-align: center;color: rosybrown;">JsEvents</h1>
+
+<h4>click on Time button to show the date</h4>
+<button onclick="document.getElementById('demo').innerHTML=Date()">Time</button>
+<p id="demo"></p>
+
+<h4>click 2 times to see the date(on doubleclick text)</h4>
+<p ondblclick="document.getElementById('DC').innerHTML=Date()">Doubleclick.</p>
+<p id="DC"></p>
+<h4>click on the paragraph with any mouse buttons accordingly it shows the result</h4>
+<button id="btn">Click me with any mouse button: left, right, middle, ...</button>
+<p id="message"></p>
+
+<h2> Enter something here</h2>  
+<input type="text" id="input1" onfocus="focusevent()"/>  <br><br>
+<form id="form">
+    <label>Test field: <input type="text"></label>
+    <br><br>
+    <button type="submit">Submit form</button>
+  </form>
+  <p id="log"></p>
+
+<!-- <p onmousedown="whichElement(event)"> Click</p>
+<p>Click somewhere in the document. An alert box will alert the name of the element you clicked on.</p>
+<h3>This is a heading</h3>
+
+<p>This is a paragraph.</p>
+    
+</body> -->
+<h4>Mouseoverevent</h4>
+<p onmouseover="mouseoverevent()">welcome</p> 
+
+<script>
+    function myFunction() {
+      alert("Page is loaded");
+    }
+    let btn = document.querySelector('#btn');
+
+// disable context menu when right-mouse clicked
+btn.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+});
+
+// show the mouse event message
+btn.addEventListener('mouseup', (e) => {
+    let msg = document.querySelector('#message');
+    switch (e.button) {
+        case 0:
+            msg.textContent = 'Left mouse button clicked.';
+            break;
+        case 1:
+            msg.textContent = 'Middle mouse button clicked.';
+            break;
+        case 2:
+            msg.textContent = 'Right mouse button clicked.';
+            break;
+        default:
+            msg.textContent = `Unknown mouse button code: ${event.button}`;
+    }
+});
+function mouseoverevent()  
+    {  
+        alert("Rahiz Shaik");  
+    }  
+    function focusevent()  
+     {  
+        document.getElementById("input1").style.background=" aqua";  
+     } 
+
+     function whichElement(e) {
+  var targ;
+  if (!e) {
+    var e = window.event;
+  }
+  if (e.target) {
+    targ=e.target;
+  } else if (e.srcElement) {
+    targ=e.srcElement;
+  }
+  var tname;
+  tname = targ.tagName;
+  alert("You clicked on a " + tname + " element.");
+} 
+function logSubmit(event) {
+  log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
+  event.preventDefault();
+}
+
+const form = document.getElementById('form');
+const log = document.getElementById('log');
+form.addEventListener('submit', logSubmit);
+    </script>
+      
+
+
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <title>Grade Sheet</title>
+   
+        <style>
+            table,td,th,tr
+                {
+                    margin-left: auto;margin-right: auto;
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                }
+        </style>
+    </head>
+        <body style="border: 4px solid black;">
+        <img src="data:image/png;base64,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   Ee7AAAAAElFTkSuQmCC" alt="VIDYANIKETHAN">
+        
+        <p style="text-align: center;font-family:sans-serif;font-size: x-large;">SREE VIDYANIKETHAN ENGINEERING COLLEGE (AUTONOMOUS)</p>
+        <b><p style="text-align: center;font-family:sans-serif;">Sree Sainath Nagar, Tirupati – 517102</p></b>  
+        <p style="text-align: center;font-family:sans-serif;font-size: small;">(Jawaharlal Nehru Technological University Anantapur, Anantapuramu)</p>
+        <p style="text-align: center;font-family:sans-serif;font-size: large;"><b><u >GRADE SHEET</u></p></b>
+        <table style="width: 80%;"><br><br><br>
+            <tr>
+                <td><b>Examination : </b>II B.Tech II Semester (SVEC-19) Regular Examinations August, 2021</td>
+                <td><b>Month & Year : </b>August 2021</td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>Branch : </b>Computer Science and Systems Engineering</td>
+            </tr>
+            <tr>
+                <td><b>Name of the Student : </b>Shaik Rahiz Basha</td>
+                <td><b>Hall Ticket No. :</b> 19121A15A2</td>
+            </tr>
+
+            
+           
+        <table style="width: 80%;">
+            <br><br>
+            <tr style="background-color:  #E18901;font-weight:bold ;">
+                <th>Student Number</th>
+                <th>Subject Code</th>
+                <th>Subject Title</th>
+                <th>Internal Marks</th>
+                <th>External Marks</th>
+                <th>Total Marks</th>
+                <th>Grade Point</th>
+                <th>Grade</th>
+                <th>Credits</th>
+            </tr>
+            <tr style="height: 30px;">
+                <td>1</td>
+                <td>19BT40502</td>
+                <td>DBMS</td>
+                <td>35</td>
+                <td>60</td>
+                <td>95</td>
+                <td>10</td>
+                <td>O</td>
+                <td>4</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td>2</td>
+                <td>19BT40503</td>
+                <td>DDA</td>
+                <td>31</td>
+                <td>49</td>
+                <td>80</td>
+                <td>8</td>
+                <td>A</td>
+                <td>3</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td>3</td>
+                <td>19BT31202</td>
+                <td>SE</td>
+                <td>37</td>
+                <td>46</td>
+                <td>83</td>
+                <td>8</td>
+                <td>A</td>
+                <td>3</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td>4</td>
+                <td>19BT40501</td>
+                <td>TOC</td>
+                <td>36</td>
+                <td>39</td>
+                <td>75</td>
+                <td>8</td>
+                <td>A</td>
+                <td>3</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td>5</td>
+                <td>19BT40106</td>
+                <td>DMM</td>
+                <td>37</td>
+                <td>48</td>
+                <td>85</td>
+                <td>9</td>
+                <td>S</td>
+                <td>1</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td>6</td>
+                <td>19BT3HS31</td>
+                <td>SS LAB</td>
+                <td>46</td>
+                <td>47</td>
+                <td>93</td>
+                <td>9</td>
+                <td>S</td>
+                <td>1</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td>7</td>
+                <td>19BT40532</td>
+                <td>DBMS LAB</td>
+                <td>46</td>
+                <td>42</td>
+                <td>88</td>
+                <td>9</td>
+                <td>S</td>
+                <td>1</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td>8</td>
+                <td>19BT31232</td>
+                <td>SE LAB</td>
+                <td>50</td>
+                <td>48</td>
+                <td>98</td>
+                <td>10</td>
+                <td>O</td>
+                <td>1</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td>9</td>
+                <td>19BT41531</td>
+                <td>DAA LAB</td>
+                <td>49</td>
+                <td>42</td>
+                <td>91</td>
+                <td>9</td>
+                <td>S</td>
+                <td>1</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td>10</td>
+                <td>19B3MCO1</td>
+                <td>ES</td>
+                <td>32</td>
+                <td>-</td>
+                <td>32</td>
+                <td>-</td>
+                <td>P</td>
+                <td>-</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td colspan="3" style="text-align: right;">Total:</td>
+                <td>399</td>
+                <td>421</td>
+                <td>820</td>
+                <td colspan="2"></td>
+                <td>20</td>
+            </tr><br><br><br>
+
+        </table>
+        <br><br>
+        <table style="border: 4px solid black;width: 80%;">
+            <tr>
+              <td style="font-size: larger;font-weight: 900;">SGPA : 7.9  /   CGPA : 6.66</td>
+            </tr>
+        </table>
+        <br>
+    </table>
+</body>
+<span style="padding: 600px;"><button type="submit">Print</button></span>
+</html>

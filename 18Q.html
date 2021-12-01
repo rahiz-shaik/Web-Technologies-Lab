@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            A {text-decoration: none;font-size: larger;} 
+            .button {
+                        background-color: #23ccff;
+                        color: white;
+                        padding: 10px 25px;
+                        text-align: center;
+                        border-radius: 5px;
+                        font-size: 10px;
+}
+            table,tr,td,th
+                            {
+                                
+                                height: 20px;
+                                width:20px;
+                                text-align: center;
+                                
+                            }
+                        tr{
+                            height: 50px;
+                            border-radius: 100px;
+                    width:50px;
+                        }
+                        table
+                    {                         
+                        margin: 10px;
+                        border: 1px solid rgb(255, 255, 255);
+                        border-collapse: collapse;
+                        width: 70%;
+                    }
+                td
+                    {
+                        width:50px;
+                        border-collapse: collapse;
+                        border:1px solid rgb(255, 255, 255);
+                        background-color:#ffffff;
+                        color: rgba(128, 128, 128, 0.911)
+                    }
+                th{
+                    border: 1px solid #ffffff;
+                    width: 10px;
+                    height: 70px;
+                    background-color:#ffffff;
+                    color: white
+                }
+        </style>
+    </head>
+    <body>
+        <h1 style="color: dodgerblue;text-align: center;">Simple nonprofit pricing</h1>
+        <br>
+        <table style="margin-left: auto;margin-right: auto;">
+            <tr>
+                <td rowspan="4"><img src="data:image/jpeg;base64,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" alt="Image_Of_Company"></td>
+                <td style="font-weight: bold;color:   #34495e  ;">GoFundMe</td>
+                <td style="font-weight: bold;color:   #34495e  ;">Essential</td>
+                <td style="font-weight: bold;color:   #34495e  ;">Premium</td>
+                <td style="font-weight: bold;color:   #34495e  ;">Enterprise</td>
+            </tr>
+            <tr>
+                    <td style="font-size: small;">Easy and Quick</td>
+                    <td style="font-size: small;">All Basic</td>
+                    <td style="font-size: small;">Grow your Non-profit</td>
+                    <td style="font-size: small;">Advanced Features</td>
+            </tr>
+            <tr>
+                <td><button class="button"><a href="https://www.nonprofiteasy.com/pricing/" target="_blank" style="color: white;">Get Started</a></button></td>
+                <td><button class="button"><a href="https://www.nonprofiteasy.com/pricing/" target="_blank" style="color: white;">Get Started</a></button></td>
+                <td><button class="button"><a href="https://www.nonprofiteasy.com/contact-us/" target="_blank" style="color: white;">Contact Us</a></button></td>
+                <td><button class="button"><a href="https://www.nonprofiteasy.com/contact-us/" target="_blank" style="color: white;">Contact Us</a></button></td>
+
+                
+            </tr>
+            <tr>
+                <td><span style="font-size: small;"><a href="https://www.nonprofiteasy.com/pricing/" target="_blank">Learn More</a></td></span>
+                <td><span style="font-size: small;"><a href="https://www.nonprofiteasy.com/pricing/" target="_blank">Learn More</a></td></span>
+                <td><span style="font-size: small;"><a href="https://www.nonprofiteasy.com/pricing/" target="_blank">Learn More</a></td></span>
+                <td><span style="font-size: small;"><a href="https://www.nonprofiteasy.com/pricing/" target="_blank">Learn More</a></td></span>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align: left;padding: 10px;color:   #34495e  ;background-color: rgba(105, 105, 105, 0.137);">Pricing</td>
+            </tr>
+            <tr>
+                <td>Plan Cost  &nbsp;&nbsp;<i style="color: rgb(128, 128, 128);" class="fa fa-question-circle"></i></td>
+                <td>Free</td>
+                <td>Free</td>
+                <td><a style="font-size: small;" href="https://www.nonprofiteasy.com/contact-us/" target="_blank">Contact Us</a></td>
+                <td><a style="font-size: small;" href="https://www.nonprofiteasy.com/contact-us/" target="_blank">Contact Us</a></td>
+            </tr>
+            <tr>
+                <td>Platform fee &nbsp;&nbsp;<i style="color: grey;" class="fa fa-question-circle"></i></td>
+                <td>0%</td>
+                <td>5%</td>
+                <td>3%</td>
+                <td><a style="font-size: small;" href="https://www.nonprofiteasy.com/contact-us/" target="_blank">Contact Us</a></td>
+
+            </tr>
+            <tr>
+                <td>Payment Processing</td>
+                <td>2.9%</td>
+                <td>2.9%</td>
+                <td>2.4%</td>
+                <td><a style="font-size: small;" href="https://www.nonprofiteasy.com/contact-us/" target="_blank">Contact Us</a></td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align: left;padding: 10px;color:   #34495e  ;background-color: rgba(105, 105, 105, 0.137);">Features</td>
+            </tr>
+            <tr>
+                <td>Unlimited Fundriser</td>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+            </tr>
+            <tr>
+                <td>easy acces to funds</td>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+            </tr>
+            <tr>
+                <td>Mobile Optimized</td>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+            </tr>
+            <tr>
+                <td>basic Donor Data</td>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+            </tr>
+            <tr>
+                <td>Team Fundraiser</td>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+            </tr>
+            <tr>
+                <td>Unlimited Fundraising events</td>
+                <td></td>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+            </tr>
+            <tr>
+                <td>Comoprehensive donor data</td>
+                <td></td>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+                <td><span style="color: green;"><i class="fa fa-check-circle"></i></td></span>
+            </tr>
+        </table>
+    </body>
+</html>
+
+
+

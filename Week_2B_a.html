@@ -1,0 +1,71 @@
+<html>
+   <head>
+    <style>
+      body{
+        background-color: rgba(0, 255, 255, 0.562);
+        text-align: center;
+      }
+      form{
+        font-size: large;
+      }
+
+      label{
+        padding-right: 100px;
+
+      }
+
+      
+    </style>
+    <script>
+      function save()
+      {
+
+        if(typeof(Storage) === "undefined")
+          alert("No local Storage");
+        else if(window.openDatabase)          
+        {      
+          var db = openDatabase("CSSE","1.0","CSSE Employee Database",100000);
+          db.transaction(function(tx)
+          {
+            tx.executeSql("CREATE TABLE EMP(name text,emp_id text,department text,salary text,address text)",[],
+              function(tx)
+              {
+                alert("EMP Table created");
+              });
+          });
+
+          db.transaction(function(tx){
+            
+            tx.executeSql("INSERT INTO EMP(name,emp_id,department,salary,address) values(?,?,?,?,?)",
+            [name.value,emp_id.value,department.value,salary.value,address.value],
+              function(tx,result)
+		{
+                alert("Record Created");
+              });
+          });
+
+        }  
+        else
+          alert("Unable to open websql database");   
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Registration Form</h1><br><br><br><br>
+    <div id = "message">
+      
+      <form action="" method='post'>
+ 
+        <label style="margin-right: 20px;"> Name </label><br><input type='text' name='name' id='name' /> <br><br>
+        <label> Emp_ID </label><br><input type='text' name='emp_id' id='emp_id' /> <br><br>
+         <label style="padding-left: 15px;">Department </label><br><input type='text' name='department' id='department' /> <br><br>
+          <label style="margin-right: 20px;"> Salary </label><br><input type='text' name='salary' id='salary' /> <br><br>
+           <label style="margin-right: 10px;">Address </label><br><input type='text' name='address' id='address' /> <br><br>
+           <br>
+        <input type='button' value='submit' onclick='save()'></input>
+        <input type='reset' value='reset'></input>
+
+      </form>
+    </div>
+  </body>
+</html>

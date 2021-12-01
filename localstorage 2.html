@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <style>
+        
+        </style>
+    </head>
+
+    <body>
+        <div class="form">
+        <h2>Local Storage</h2>
+        <label for="UserName">Name</label><br>
+        <input class="box" type="text" name="Username" id="UserName">
+        <br>
+        <label for="pass">Password</label><br>
+        <input class="box" type="password" name="pass" id="pass">
+        <br><br>
+
+        <button onclick="store()">Submit</button>
+        <input type="reset" id="reset" value="reset" class="reset">
+        </div>
+        <script>
+            function store()
+            {
+                var inputUserName = document.getElementById("UserName");
+                localStorage.setItem("UserName",inputUserName.value);
+
+                var inputpassword = document.getElementById("pass");
+                localStorage.setItem("pass",inputpassword.value);
+                // document.getElementById("output").innerHTML = localStorage.getItem("user");
+
+            }
+        </script>
+    </body>
+</html>

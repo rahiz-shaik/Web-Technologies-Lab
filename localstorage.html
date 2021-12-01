@@ -1,0 +1,35 @@
+<html>
+    <head>
+     
+    </head>
+    <style>
+    
+    </style>
+    <body>
+        <form action="Basic.html">
+            <fieldset>
+                <legend>Login</legend>
+                <label for="fname">Username:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" onclick="save()">
+                <input type="reset">
+            </fieldset>
+        </form>
+        <script>
+            function save()
+            {
+                if(typeof(Storage)!=="undefined")
+                {
+                    var xinput=document.getElementById("fname").value;
+                    localStorage.getItem("fname",x);
+                    var yinput=document.getElementById("password").value;
+                    localStorage.getItem("password",y);
+                }
+
+            }
+        </script>
+
+    </body>
+</html>
